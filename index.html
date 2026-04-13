@@ -6,43 +6,68 @@
 <title>SINUCAF 2026</title>
 
 <style>
-/* RESET */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+    background: #eef2f7;
+    color: #222;
 }
 
-/* IMAGEM TOPO */
+/* HERO */
+.hero {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
 .hero img {
     width: 100%;
     height: auto;
     display: block;
+    filter: brightness(0.95);
 }
 
-/* CONTAINER FLEXÍVEL */
+/* HEADER */
+.header {
+    text-align: center;
+    padding: 2rem 1rem 1rem;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: clamp(1.8rem, 3vw, 3rem);
+    color: #1a1a1a;
+}
+
+.header p {
+    margin-top: 0.5rem;
+    color: #555;
+}
+
+/* CONTAINER */
 .container {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: auto;
     padding: 1rem;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 25px;
 }
 
-/* TÍTULO */
-h1 {
-    text-align: center;
-    font-size: clamp(1.5rem, 3vw, 2.5rem);
+/* CARD */
+.card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 1rem;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
 }
 
-/* PLANILHA RESPONSIVA */
+/* PLANILHA */
 .sheet {
     width: 100%;
     aspect-ratio: 16 / 9;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
 }
 
 .sheet iframe {
@@ -51,7 +76,15 @@ h1 {
     border: none;
 }
 
-/* AJUSTE MOBILE */
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* MOBILE */
 @media (max-width: 768px) {
     .container {
         padding: 0.5rem;
@@ -63,24 +96,34 @@ h1 {
 
 <body>
 
-<!-- IMAGEM TOPO -->
+<!-- BANNER -->
 <div class="hero">
-    <img src="https://github.com/deux78/site-do-sinucaf/raw/7931415d7193dfd1a3e0f9bdadec623c088bd3ef/Astronomy%20Quiz%20Google%20Forms%20Header%20in%20Colorful%20Modern%20Style.PNG" alt="Astronomy Quiz Header">
+    <img src="https://github.com/deux78/site-do-sinucaf/raw/7931415d7193dfd1a3e0f9bdadec623c088bd3ef/Astronomy%20Quiz%20Google%20Forms%20Header%20in%20Colorful%20Modern%20Style.PNG" alt="SINUCAF Banner">
+</div>
+
+<!-- HEADER -->
+<div class="header">
+    <h1>SINUCAF 2026</h1>
+    <p>Sistema de acompanhamento oficial do torneio</p>
 </div>
 
 <!-- CONTEÚDO -->
 <div class="container">
 
-    <h1>SINUCAF 2026</h1>
-
-    <!-- PLANILHA -->
-    <div class="sheet">
-        <iframe 
-            src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTINVyd87Y-5Mot8Q1z1bj_VxZ1gtVKN_HJg1nvppggmGNUFq1_pXwL-Lyrbqo5p6dTHPh64L2-hpbA/pubhtml?gid=1988427649&single=true&widget=true&headers=false">
-        </iframe>
+    <!-- CARD PLANILHA -->
+    <div class="card">
+        <div class="sheet">
+            <iframe 
+                src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTINVyd87Y-5Mot8Q1z1bj_VxZ1gtVKN_HJg1nvppggmGNUFq1_pXwL-Lyrbqo5p6dTHPh64L2-hpbA/pubhtml?gid=1988427649&single=true&widget=true&headers=false">
+            </iframe>
+        </div>
     </div>
 
 </div>
+
+<footer>
+    Desenvolvido para o SINUCAF 2026
+</footer>
 
 </body>
 </html>
