@@ -3,10 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SINUCAF 2026</title>
+<title>SINUCAF 2026 - Pontos Corridos</title>
 
 <style>
-/* RESET GLOBAL */
 * {
     margin: 0;
     padding: 0;
@@ -16,13 +15,12 @@
 body {
     font-family: Arial, sans-serif;
     background: #eef2f7;
-    overflow-x: hidden; /* 🔥 remove barra lateral */
+    overflow-x: hidden; /* 🔥 remove scroll horizontal */
 }
 
-/* HERO FULL WIDTH */
+/* BANNER */
 .hero img {
-    width: 100vw;
-    max-width: 100%;
+    width: 100%;
     height: auto;
     display: block;
 }
@@ -30,55 +28,61 @@ body {
 /* HEADER */
 .header {
     text-align: center;
-    padding: 2rem 1rem 1rem;
+    padding: 1.5rem;
 }
 
 .header h1 {
-    font-size: clamp(1.8rem, 3vw, 3rem);
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
 }
 
 .header p {
     color: #555;
 }
 
-/* CONTAINER FULL WIDTH CONTROLADO */
+/* CONTAINER */
 .container {
     width: 100%;
-    max-width: 100%; /* 🔥 remove limite que causava scroll */
+    max-width: 100%;
     padding: 1rem;
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    justify-content: center;
 }
 
 /* CARD */
 .card {
     width: 100%;
-    background: #fff;
+    max-width: 1200px;
+    background: white;
     border-radius: 16px;
-    padding: 1rem;
     box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-}
-
-/* PLANILHA FULL RESPONSIVA */
-.sheet {
-    width: 100%;
-    height: 80vh; /* 🔥 ocupa quase tela inteira */
-    border-radius: 12px;
     overflow: hidden;
 }
 
-.sheet iframe {
+/* TABELA RESPONSIVA (SEM SCROLL HORIZONTAL) */
+.table-wrap {
     width: 100%;
-    height: 100%;
+    overflow-x: auto; /* só ativa se necessário, mas quase nunca aparece */
+}
+
+iframe {
+    width: 100%;
+    height: 85vh; /* ocupa quase a tela inteira */
     border: none;
 }
 
 /* FOOTER */
 footer {
     text-align: center;
-    padding: 2rem 1rem;
+    padding: 2rem;
     color: #666;
+    font-size: 0.9rem;
+}
+
+/* MOBILE AJUSTE */
+@media (max-width: 768px) {
+    iframe {
+        height: 75vh;
+    }
 }
 </style>
 
@@ -94,24 +98,24 @@ footer {
 <!-- HEADER -->
 <div class="header">
     <h1>SINUCAF 2026</h1>
-    <p>Sistema oficial do torneio</p>
+    <p>Sistema de Pontos Corridos Oficial</p>
 </div>
 
-<!-- CONTEÚDO -->
+<!-- SISTEMA -->
 <div class="container">
 
     <div class="card">
-        <div class="sheet">
-            <iframe 
-                src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTINVyd87Y-5Mot8Q1z1bj_VxZ1gtVKN_HJg1nvppggmGNUFq1_pXwL-Lyrbqo5p6dTHPh64L2-hpbA/pubhtml?gid=1988427649&single=true&widget=true&headers=false">
-            </iframe>
-        </div>
+
+        <iframe 
+            src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTINVyd87Y-5Mot8Q1z1bj_VxZ1gtVKN_HJg1nvppggmGNUFq1_pXwL-Lyrbqo5p6dTHPh64L2-hpbA/pubhtml?gid=1988427649&single=true&widget=true&headers=false">
+        </iframe>
+
     </div>
 
 </div>
 
 <footer>
-    SINUCAF 2026
+    Sistema de Pontos Corridos - SINUCAF 2026
 </footer>
 
 </body>
