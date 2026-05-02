@@ -14,26 +14,18 @@
 
         .hero img {
             width: 100%;
-            height: auto;
             display: block;
         }
 
         h1 {
             text-align: center;
-            margin: 2rem 0;
+            margin: 20px 0;
         }
 
-        /* Container só para o título */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1rem;
-        }
-
-        /* Planilha ocupa tela inteira */
+        /* PLANILHA TELA TOTAL */
         .sheet {
             width: 100%;
-            height: 100vh;
+            height: calc(100vh - 180px); /* ajusta ao espaço do banner + título */
         }
 
         .sheet iframe {
@@ -47,16 +39,14 @@
 <body>
 
     <div class="hero">
-        <img src="https://github.com/user-attachments/assets/95002fab-b0c3-41f0-a852-3dfba10c26b5" alt="Banner SINUCAF">
+        <img src="https://github.com/user-attachments/assets/95002fab-b0c3-41f0-a852-3dfba10c26b5">
     </div>
 
-    <div class="container">
-        <h1>SINUCAF 2026</h1>
-    </div>
+    <h1>SINUCAF 2026</h1>
 
     <div class="sheet">
         <iframe 
-            src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTINVyd87Y-5Mot8Q1z1bj_VxZ1gtVKN_HJg1nvppggmGNUFq1_pXwL-Lyrbqo5p6dTHPh64L2-hpbA/pubhtml?gid=2080454464&widget=true&headers=false">
+            src="https://docs.google.com/spreadsheets/d/1wqRxj-YdXHLFTMUO8BXtgH1QguwK9YwtSXBHcFbJdSg/preview">
         </iframe>
     </div>
 
